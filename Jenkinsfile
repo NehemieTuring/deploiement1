@@ -9,7 +9,7 @@ pipe line{
 			post{
 				SUCCESS{
 					echo "Archiving tne Artifacts"
-					archiveArtifacts artifacts '**/target/.war*
+					archiveArtifacts artifacts '**/target/.war*'
 				}
 				
 			}
