@@ -7,9 +7,9 @@ pipeline{
 				sh 'mvn clean package'
 			}
 			post{
-				SUCCESS{
+				success{
 					echo "Archiving tne Artifacts"
-					archiveArtifacts artifacts '**/target/*.war'
+					archiveArtifacts artifacts:'**/target/*.war'
 				}
 				
 			}
