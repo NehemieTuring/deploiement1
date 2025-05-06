@@ -6,13 +6,6 @@ pipeline{
 			steps{
 				sh 'mvn clean package'
 			}
-			post{
-				success{
-					echo "Archiving tne Artifacts"
-					archiveArtifacts artifacts:'**/target/*.war'
-				}
-				
-			}
 		}
 		stage('deploiement dans tomcat'){
 			steps{
